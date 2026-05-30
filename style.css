@@ -1,1 +1,9 @@
+let points = localStorage.getItem("points") || 0;
 
+document.getElementById("points").innerText = points;
+
+document.getElementById("tapBtn").addEventListener("click", () => {
+  points++;
+  document.getElementById("points").innerText = points;
+  localStorage.setItem("points", points);
+});
